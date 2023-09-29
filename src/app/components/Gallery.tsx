@@ -10,5 +10,13 @@ export default async function Gallery() {
   if (!images)
     return <h2 className='m-4 text-2xl font-bold'>No Images Found</h2>;
 
-  return <div>Gallery</div>;
+  return (
+    <section>
+      <ul>
+        {images.photos.map((photo) => (
+          <li key={photo.id}>{photo.src.large}</li>
+        ))}
+      </ul>
+    </section>
+  );
 }

@@ -1,3 +1,5 @@
+import Gallery from '@/app/components/Gallery';
+
 export default function Home() {
-  return <h1>Hello World!</h1>;
+  return <Gallery />;
 }

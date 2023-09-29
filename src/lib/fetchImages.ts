@@ -1,5 +1,6 @@
 import type { ImagesResults } from '@/models/Images';
 import { ImagesSchemaWithPhotos } from '@/models/Images';
+import env from './env';
 
 export default async function fetchImages(
   url: string
@@ -7,7 +8,8 @@ export default async function fetchImages(
   try {
     const res = await fetch(url, {
       headers: {
-        Authorizations: process.env.PEXELS_API_KEY,
+        // Authorizations: process.env.PEXELS_API_KEY,
+        Authorizations: env.PEXELS_API_KEY,
       },
     });
 

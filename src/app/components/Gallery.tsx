@@ -10,13 +10,12 @@ export default async function Gallery() {
   if (!images)
     return <h2 className='m-4 text-2xl font-bold'>No Images Found</h2>;
 
+  // grid-cols-gallery is defined in C:\react\next-13-image-gallery\tailwind.config.ts
   return (
-    <section>
-      <ul>
-        {images.photos.map((photo) => (
-          <li key={photo.id}>{photo.src.large}</li>
-        ))}
-      </ul>
+    <section className='px-2 my-3 grid gap-2 grid-cols-gallery'>
+      {images.photos.map((photo) => (
+        <div key={photo.id} className='h-64 bg-gray-200 rounded-xl'></div>
+      ))}
     </section>
   );
 }

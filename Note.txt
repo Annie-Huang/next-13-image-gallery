@@ -1,5 +1,5 @@
-Build an Image Gallery with Next.js 13
-(https://www.youtube.com/playlist?list=PL4cUxeGkcC9hYBP0AZ3MNdEiiZqd4mHGm)
+Build an Image Gallery with Next.js 13      (https://www.youtube.com/playlist?list=PL4cUxeGkcC9hYBP0AZ3MNdEiiZqd4mHGm)
+https://netninja.dev/p/build-an-image-gallery-with-next-13
 
 https://github.com/gitdagray/nextjs-image-gallery-ninja
 https://github.com/Annie-Huang/next-13-image-gallery

@@ -14,6 +14,7 @@ https://zod.dev/
 
 https://nextjs.org/docs/app/api-reference/components/image
 https://nextjs.org/docs/app/api-reference/components/image#remotepatterns
+https://nextjs.org/docs/app/api-reference/components/image#fill
 
 ------------------------------------------------------------------------------
 PS C:\react\next-13-image-gallery> npm i zod

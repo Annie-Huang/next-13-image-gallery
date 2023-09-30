@@ -7,8 +7,14 @@ type Props = {
 
 const ImgContainer = ({ photo }: Props) => {
   return (
-    <div key={photo.id} className='h-64 bg-gray-200 rounded-xl'>
-      <Image src={photo.src.large} alt={photo.alt} width={250} height={250} />
+    <div className='h-64 bg-gray-200 rounded-xl relative overflow-hidden'>
+      {/* object-cover is a tailwind class */}
+      <Image
+        src={photo.src.large}
+        alt={photo.alt}
+        fill={true}
+        className='object-cover'
+      />
     </div>
   );
 };

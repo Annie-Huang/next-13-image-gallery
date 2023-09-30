@@ -15,14 +15,16 @@ https://zod.dev/
 https://nextjs.org/docs/app/api-reference/components/image
 https://nextjs.org/docs/app/api-reference/components/image#remotepatterns
 https://nextjs.org/docs/app/api-reference/components/image#fill
+https://nextjs.org/docs/app/api-reference/components/image#placeholder
 
 https://ausi.github.io/respimagelint/       <--- Use to calculate the 'sizes' attribute for the <Image>
-
 https://tailwindcss.com/docs/hover-focus-and-other-states#styling-based-on-parent-state
+https://plaiceholder.co/docs/usage#base64
 
 ------------------------------------------------------------------------------
 PS C:\react\next-13-image-gallery> npm i zod
 PS C:\react\next-13-image-gallery> npm i envalid
+PS C:\react\next-13-image-gallery> npm i plaiceholder
 
 ------------------------------------------------------------------------------
 

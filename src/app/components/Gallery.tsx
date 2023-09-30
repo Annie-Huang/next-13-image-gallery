@@ -3,9 +3,17 @@ import fetchImages from '@/lib/fetchImages';
 import ImgContainer from './ImgContainer';
 import addBlurredDataUrl from '@/lib/getBase64';
 
-export default async function Gallery() {
+type Props = {
+  // topic?: string | undefined;
+  topic?: string;
+};
+
+export default async function Gallery({ topic }: Props) {
   // https://www.pexels.com/api/documentation/#photos-curated
-  const url = 'https://api.pexels.com/v1/curated';
+  // https://www.pexels.com/api/documentation/#photos-search
+  const url = topic
+    ? `https://api.pexels.com/v1/search?query=${topic}`
+    : 'https://api.pexels.com/v1/curated';
 
   const images: ImagesResults | undefined = await fetchImages(url);
 

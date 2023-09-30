@@ -7,6 +7,6 @@ export function generateMetadata({ params: { term } }: Props) {
     title: `Results for ${term}`,
   };
 }
-export function SearchResults({ params: { term } }: Props) {
+export default function SearchResults({ params: { term } }: Props) {
   return <Gallery topic={term} />;
 }

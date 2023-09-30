@@ -2,6 +2,7 @@ import type { ImagesResults } from '@/models/Images';
 import fetchImages from '@/lib/fetchImages';
 import ImgContainer from './ImgContainer';
 import addBlurredDataUrl from '@/lib/getBase64';
+import getPrevNextPages from '@/lib/getPrevNextPages';
 
 type Props = {
   // topic?: string | undefined;
@@ -33,6 +34,9 @@ export default async function Gallery({ topic = 'curated', page }: Props) {
   const photosWithBlur = await addBlurredDataUrl(images);
 
   // calculate pagination
+  const { prevPage, nextPage } = getPrevNextPages(images);
+
+  const footerProps = { topic, page, nextPage, prevPage };
 
   // grid-cols-gallery is defined in C:\react\next-13-image-gallery\tailwind.config.ts
   // auto-rows-[10px] means grid row by default is 10px height

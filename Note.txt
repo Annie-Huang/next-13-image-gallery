@@ -29,6 +29,12 @@ PS C:\react\next-13-image-gallery> npm i plaiceholder
 Tech stack we use:
 nextjs, tailwind, zod.
 
+
+Test the system:
+Got to next / prev without searching anything.
+Search for water melone, go to next / prev pages.
+Go to a page that does not exist: e.g. http://localhost:3000/results/water%20melon/1000
+Search no existing things: http://localhost:3000/results/cewafewafw
 ------------------------------------------------------------------------------
 
 PS C:\react> npx create-next-app@latest

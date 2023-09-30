@@ -3,6 +3,7 @@ import fetchImages from '@/lib/fetchImages';
 import ImgContainer from './ImgContainer';
 import addBlurredDataUrl from '@/lib/getBase64';
 import getPrevNextPages from '@/lib/getPrevNextPages';
+import Footer from './Footer';
 
 type Props = {
   // topic?: string | undefined;
@@ -49,7 +50,7 @@ export default async function Gallery({ topic = 'curated', page }: Props) {
           <ImgContainer photo={photo} key={photo.id} />
         ))}
       </section>
-      {/* Add footer */}
+      <Footer {...footerProps} />
     </>
   );
 }

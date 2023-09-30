@@ -40,3 +40,32 @@ export const ImagesSchemaWithPhotos = BasicImageSchema.extend({
 export type Photo = z.infer<typeof PhotoSchema>;
 
 export type ImagesResults = z.infer<typeof ImagesSchemaWithPhotos>;
+
+/*
+An example of the return data can be:
+
+imagesResults {
+  page: 1,
+  per_page: 15,
+  photos: [
+    {
+      id: 18422815,
+      width: 3268,
+      height: 4904,
+      url: 'https://www.pexels.com/photo/flame-under-hot-air-balloon-at-night-18422815/',
+      photographer: 'M.Emin  BİLİR',
+      photographer_url: 'https://www.pexels.com/@travelerchitect',
+      photographer_id: 202978783,
+      avg_color: '#312725',
+      src: [Object],
+      liked: false,
+      alt: ''
+    },
+    ...
+  ],
+  total_results: 8000,
+  next_page: 'https://api.pexels.com/v1/curated/?page=2&per_page=15'
+}
+
+
+*/

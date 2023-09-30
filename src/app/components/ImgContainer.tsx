@@ -6,6 +6,7 @@ type Props = {
   photo: Photo;
 };
 
+// You will need to search something to be able to see image with different height, like 'tomato', I found the default landing pages always have images around the same size.
 const ImgContainer = ({ photo }: Props) => {
   // calculate how many rows does each image needs from its ratio if we set the width to be 250px
   const widthHeightRatio = photo.height / photo.width;
@@ -16,8 +17,8 @@ const ImgContainer = ({ photo }: Props) => {
   // group | group-hover:opacity-75 -> When hover on the parent, the children change opacity to 75
   // https://nextjs.org/docs/app/api-reference/components/image#placeholder. The blur image is a very nice blur image Next.js can give you while loading the image.
   // This is need to set the network to slow 3G to be able to see.
-  // <div className='h-64 bg-gray-200 rounded-xl relative overflow-hidden group'>
   return (
+    // <div className='h-64 bg-gray-200 rounded-xl relative overflow-hidden group'>
     <div
       className='w-[250px] justify-self-center'
       style={{ gridRow: `span ${photoSpans}` }}

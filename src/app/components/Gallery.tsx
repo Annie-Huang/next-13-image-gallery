@@ -25,7 +25,8 @@ export default async function Gallery({ topic }: Props) {
   // grid-cols-gallery is defined in C:\react\next-13-image-gallery\tailwind.config.ts
   // auto-rows-[10px] means grid row by default is 10px height
   return (
-    <section className='px-2 my-3 grid gap-2 grid-cols-gallery auto-rows-[10px]'>
+    // <section className='px-2 my-3 grid gap-2 grid-cols-gallery auto-rows-[10px]'>
+    <section className='px-1 my-3 grid grid-cols-gallery auto-rows-[10px]'>
       {/*{images.photos.map((photo) => (*/}
       {photosWithBlur.map((photo) => (
         <ImgContainer photo={photo} key={photo.id} />

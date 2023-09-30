@@ -12,9 +12,18 @@ type Props = {
 export default async function Gallery({ topic = 'curated', page }: Props) {
   // https://www.pexels.com/api/documentation/#photos-curated
   // https://www.pexels.com/api/documentation/#photos-search
-  const url = topic
-    ? `https://api.pexels.com/v1/search?query=${topic}`
-    : 'https://api.pexels.com/v1/curated';
+  let url;
+  if (topic === 'curated' && page) {
+    url = `https://api.pexels.com/v1/curated?page=${page}`;
+  } else if (topic === 'curated') {
+    url = 'https://api.pexels.com/v1/curated';
+  } else if (!page) {
+    // 1st page of the search results
+    url = `https://api.pexels.com/v1/search?query=${topic}`;
+  } else {
+    // search result beyond 1st page.
+    url = `https://api.pexels.com/v1/search?query=${topic}&page=${page}`;
+  }
 
   const images: ImagesResults | undefined = await fetchImages(url);
 

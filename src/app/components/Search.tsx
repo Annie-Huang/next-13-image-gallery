@@ -10,7 +10,8 @@ export default function Search() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    router.push(`/results/${search}`);
+    // Only trigger search if user has enter something before hitting 'enter'
+    if (search) router.push(`/results/${search}`);
     setSearch('');
   };
 

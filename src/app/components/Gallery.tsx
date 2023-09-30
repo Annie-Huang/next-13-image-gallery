@@ -6,9 +6,10 @@ import addBlurredDataUrl from '@/lib/getBase64';
 type Props = {
   // topic?: string | undefined;
   topic?: string;
+  page?: string;
 };
 
-export default async function Gallery({ topic }: Props) {
+export default async function Gallery({ topic = 'curated', page }: Props) {
   // https://www.pexels.com/api/documentation/#photos-curated
   // https://www.pexels.com/api/documentation/#photos-search
   const url = topic

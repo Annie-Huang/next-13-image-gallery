@@ -45,7 +45,7 @@ export type ImagesResults = z.infer<typeof ImagesSchemaWithPhotos>;
 An example of the return data can be:
 
 imagesResults {
-  page: 1,
+  page: 2,
   per_page: 15,
   photos: [
     {
@@ -64,8 +64,7 @@ imagesResults {
     ...
   ],
   total_results: 8000,
-  next_page: 'https://api.pexels.com/v1/curated/?page=2&per_page=15'
+  next_page: 'https://api.pexels.com/v1/curated/?page=3&per_page=15',
+  prev_page: 'https://api.pexels.com/v1/curated/?page=1&per_page=15'
 }
-
-
 */

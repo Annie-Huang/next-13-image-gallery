@@ -26,6 +26,9 @@ export default function Footer({ topic, page, nextPage, prevPage }: Props) {
     </Link>
   ) : null;
 
+  // Always show the current page as the first items in the list.
+  // e.g. if current page is 10, it will show
+  // <<< 10 11 12 13 >>>
   const prevPageArea = prevPage ? (
     <>
       <Link
@@ -46,5 +49,10 @@ export default function Footer({ topic, page, nextPage, prevPage }: Props) {
     </>
   ) : null;
 
-  return <div></div>;
+  return (
+    <footer className='flex flex-row justify-between items-center px-2 py-4 font-bold w-60 mx-auto'>
+      {prevPageArea}
+      {nextPageArea}
+    </footer>
+  );
 }

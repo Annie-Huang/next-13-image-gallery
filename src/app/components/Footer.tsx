@@ -27,12 +27,23 @@ export default function Footer({ topic, page, nextPage, prevPage }: Props) {
   ) : null;
 
   const prevPageArea = prevPage ? (
-    <Link
-      href={`/results/${topic}/${nextPage}`}
-      className={!nextPage ? 'mx-auto' : ''}
-    >
-      &lt;&lt;&lt; {!nextPage ? 'back' : null}
-    </Link>
+    <>
+      <Link
+        href={`/results/${topic}/${nextPage}`}
+        className={!nextPage ? 'mx-auto' : ''}
+      >
+        &lt;&lt;&lt; {!nextPage ? 'back' : null}
+      </Link>
+      {pageNums.map((num, i) =>
+        page && num === parseInt(page) ? (
+          <span key={i}>{num}</span>
+        ) : (
+          <Link href={`/results/${topic}/${num}`} className='underline' key={i}>
+            {num}
+          </Link>
+        )
+      )}
+    </>
   ) : null;
 
   return <div></div>;

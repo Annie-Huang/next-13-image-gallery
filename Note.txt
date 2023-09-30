@@ -12,6 +12,9 @@ https://www.pexels.com/api/documentation/#photos-curated
 
 https://zod.dev/
 
+https://nextjs.org/docs/app/api-reference/components/image
+https://nextjs.org/docs/app/api-reference/components/image#remotepatterns
+
 ------------------------------------------------------------------------------
 PS C:\react\next-13-image-gallery> npm i zod
 PS C:\react\next-13-image-gallery> npm i envalid

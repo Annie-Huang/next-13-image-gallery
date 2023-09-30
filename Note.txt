@@ -16,6 +16,8 @@ https://nextjs.org/docs/app/api-reference/components/image
 https://nextjs.org/docs/app/api-reference/components/image#remotepatterns
 https://nextjs.org/docs/app/api-reference/components/image#fill
 
+https://ausi.github.io/respimagelint/       <--- Use to calculate the 'sizes' attribute for the <Image>
+
 ------------------------------------------------------------------------------
 PS C:\react\next-13-image-gallery> npm i zod
 PS C:\react\next-13-image-gallery> npm i envalid

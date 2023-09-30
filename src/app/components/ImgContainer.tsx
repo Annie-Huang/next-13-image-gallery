@@ -6,6 +6,11 @@ type Props = {
 };
 
 const ImgContainer = ({ photo }: Props) => {
+  // calculate how many rows does each image needs from its ratio if we set the width to be 250px
+  const widthHeightRatio = photo.height / photo.width;
+  const galleryHeight = Math.ceil(250 * widthHeightRatio); // 250px is the weight
+  const photoSpans = Math.ceil(galleryHeight / 10) + 1; // 10px is the default height we set for row in Gallery.tsx. so each image will occupy multiple grid rows. 1px is the gap
+
   // Use https://ausi.github.io/respimagelint/  to get the value for the sizes
   // group | group-hover:opacity-75 -> When hover on the parent, the children change opacity to 75
   // https://nextjs.org/docs/app/api-reference/components/image#placeholder. The blur image is a very nice blur image Next.js can give you while loading the image.

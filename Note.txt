@@ -26,6 +26,9 @@ PS C:\react\next-13-image-gallery> npm i zod
 PS C:\react\next-13-image-gallery> npm i envalid
 PS C:\react\next-13-image-gallery> npm i plaiceholder
 
+Tech stack we use:
+nextjs, tailwind, zod.
+
 ------------------------------------------------------------------------------
 
 PS C:\react> npx create-next-app@latest

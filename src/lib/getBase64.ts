@@ -12,7 +12,7 @@ async function getBase64(imageUrl: string) {
 
     const buffer = await res.arrayBuffer();
     const { base64 } = await getPlaiceholder(Buffer.from(buffer));
-    console.log(base64);
+    // console.log(base64);
 
     return base64;
   } catch (e) {
@@ -23,7 +23,7 @@ async function getBase64(imageUrl: string) {
 export default async function addBlurredDataUrl(
   images: ImagesResults
 ): Promise<Photo[]> {
-  // https://nextjs.org/docs/app/api-reference/components/image#placeholder
+  // https://nextjs.org/docs/app/api-reference/components/image#placeholder. The blur image is a very nice blur image Next.js can give you while loading the image.
 
   // Make all requests at once instead of waiting each one - avoiding a waterfall
   const base64Promises = images.photos.map((photo) =>
